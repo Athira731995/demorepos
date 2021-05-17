@@ -1,0 +1,18 @@
+.tbl{
+   border-collapse: collapse;
+    width: 100%;
+}
+.tbl_head{
+    background-color: green;
+}
+.tbl_head:hover{
+    background-color: brown;
+}
+.tbl_row:nth-child(odd){
+    text-align: center;
+    background-color: grey;
+}
+.tbl_row:hover:nth-child(even){
+    background-color: cadetblue;
+    text-align: center;
+}
