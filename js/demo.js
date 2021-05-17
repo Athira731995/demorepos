@@ -63,3 +63,4 @@ function asyntest(){
 }
 asyntest()
 console.log("finished....")
+console.log("test")
