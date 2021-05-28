@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +10,34 @@
   <link rel="stylesheet" href="../bootstrap-5.0.0-beta3-dist/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="../bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
 </head>
+
 <body>
- <button onclick="add()">click to add</button>
- <div id=mydiv>
 
- </div>
-<ul id=myarray>
+  <form action="css.html"  onsubmit="return validate()">
+     <div>
+      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter Your Firstname">
+    </div>
+    <div>
+      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Your Lastname">
+    </div>
+    <div>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your password">
+    </div>
+    <div>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+    </div>
+    <div>
+      <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter Your Mobile Number">
 
-</ul>
-<button onclick="remove()">remove</button>
-
+    </div>
+    <input type="submit" value="Save">
+  </form>
 
 <script src="../js/demo.js"></script>
- 
+
+
+
+
 </body>
+
 </html>

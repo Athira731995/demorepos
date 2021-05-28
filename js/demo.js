@@ -1,66 +1,103 @@
-function add(){
-   // document.getElementById("mydiv").innerHTML=`<p>welcome</p>`
-   let mypara=document.createElement("p")
-    mypara.innerText="welcome"
-    mypara.id="p1"
-    mypara.style="color:red"
-    document.getElementById("mydiv").appendChild(mypara)
+function validate(){
+ let  fname=  document.getElementById("firstname")
+ let  lname=  document.getElementById("lastname")
+ let  email=  document.getElementById("email")
+ let  mobile=  document.getElementById("mobile")
+ let  password=  document.getElementById("password")
+if(fname.value==""){
+    console.log("dd")
+    alert("first name can't be empty")
+    fname.focus()
+    return false
+}
+
+
+if(mobile.value==""){
+    console.log("dd")
+    alert("mobile number field can't be  empty")
+    mobile.focus()
+    return false
+}
+console.log(isNaN(mobile.value))
+if(/^\+91\s\d{10}$/.test(mobile.value)==false){
+    alert("invalid mobile number")
+    mobile.focus()
+    return false
 
 }
-let data=["a","b","c","d","e"]
-
-
-for(let i of data){
-  let li= document.createElement("li")
-  li.innerText=i
-  document.getElementById("myarray").appendChild(li)
-
+if(password.value==""){
+    alert("Password field can't be empty")
+    password.focus()
+    return false
+}
+if(password.value.length!=5)
+{
+    alert("Password Length should be 5")
+    password.focus()
+    return false
 
 }
-function remove(){
- let parent=document.getElementById("myarray")
-//  parent.removeChild(parent.childNodes[0])
-parent.remove()
-}
-let num_arr=[10,12,33,35,27,28,32]
 
-num_arr.forEach((num)=>{
-    console.log(num)
-})
-let new_arrr=num_arr.map((d)=>{
-    return d**2
-})
-console.log(new_arrr)
-let new_array=num_arr.map((elements)=>{
-    return elements+2
+}
+document.write("demo","\u0D05")
+localStorage.setItem("one","apple")
+localStorage.setItem("two","grape")
+localStorage.setItem("three","orange")
+console.log(localStorage.length)
+function volume(l)
+{
+    return function(b){
+        return function(h){
+            return l*b*h
+        }
+    }
+}
+
+
+f=volume(100)
+console.log(f)
+f1=f(40)
+console.log(f1(10))
+console.log(volume(1)(2)(3))
+function greet(gender,age,name){
+    let salutation=gender=="male"?"Mr":"Ms"
+    if(age>30){
+        console.log("hello "+salutation+" "+name)
+    }else{
+        console.log("hey "+salutation+" "+name)
+    }
+}
+f=greet.bind(null,"male",30)
+console.log(f)
+f("Amal")
+let num=["x",123,"y",56,90]
+let result=num.every((element)=>{
+    console.log("called")
+    if(/^\d+$/.test(element)){
+        return true
+    }
 
 })
-console.log(new_array)
-let new_arrys=num_arr.filter((d)=>{
-if(d%2!=0){
-    return d
-}
+console.log(result)
+result=num.some((element)=>{
+    console.log("called")
+    if(/^\d+$/.test(element)){
+        return true
+    }
+
 })
-console.log(new_arrys)
-let r=new_array.reduce((x,y)=>{
-    // 5mins
-    // console.log(" x =",x)
-    // console.log(" y =",y)
-    // return x+y
-})
-console.log(r)
-// let r=new_array.reduceRight((x,y)=>{
-//     console.log(" x =",x)
-//     console.log(" y =",y)
-//     return x-y
-// })
-// console.log(r)
-console.log("started...")
-function asyntest(){
-    setTimeout(()=>{
-        console.log("inside asyn function...")
-    },5000)
+console.log(result)
+
+//Array Destruction
+let [a,b,c,d,e]=num
+console.log(a)
+console.log(b)
+console.log(c)
+let o1={x:10,y:20}
+let o2={k:30,y:25}
+let o3=Object.assign(o1,o2)
+console.log(o3)
+for ([Key,value] of Object.entries(o3)){
+    console.log(`key :${Key} : value : ${value}`)
 }
-asyntest()
-console.log("finished....")
-console.log("test")
+qwertyi
